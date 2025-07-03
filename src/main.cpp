@@ -270,14 +270,12 @@ void loadPickerShader() {
 #else
     std::filesystem::path shaderPath = Mod::get()->getResourcesDir() / "picker_main.fsh";
 #endif
-    // why is c++ so ass
-    // i want my std::fs::read_to_string
-    std::ifstream file(shaderPath);
-    std::stringstream buffer;
-    buffer << file.rdbuf();
-    file.close();
 
-    auto shaderCode = buffer.str();
+    GEODE_UNWRAP_OR_ELSE(shaderCode, _err, geode::utils::file::readString(shaderPath)) {
+        log::error("could not load picker shader");
+        return;
+    }
+
 	ShaderCache::get()->createShader("colorPicker", shaderCode);
 }
 
