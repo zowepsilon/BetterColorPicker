@@ -1,8 +1,9 @@
 #include "BetterColorPicker.h"
 
 using namespace geode::prelude;
-
 #include <Geode/modify/GameManager.hpp>
+
+#include <algorithm>
 
 #include "ShaderCache.h"
 
@@ -147,7 +148,7 @@ std::tuple<double, double, double> BetterColorPicker::closestPointInTriangle(dou
             z = 0.0;
         } else {
             y = 0.0;
-            z = clamp(dot(p-v1, v3-v1) / dot(v3-v1, v3-v1), 0.0, 1.0);
+            z = std::clamp(dot(p-v1, v3-v1) / dot(v3-v1, v3-v1), 0.0, 1.0);
         }
 
         x = 1.0 - y - z;
@@ -157,7 +158,7 @@ std::tuple<double, double, double> BetterColorPicker::closestPointInTriangle(dou
             x = 0.0;
         } else {
             z = 0.0;
-            x = clamp(dot(p-v2, v1-v2) / dot(v1-v2, v1-v2), 0.0, 1.0);
+            x = std::clamp(dot(p-v2, v1-v2) / dot(v1-v2, v1-v2), 0.0, 1.0);
         }
 
         y = 1.0 - z - x;
@@ -167,7 +168,7 @@ std::tuple<double, double, double> BetterColorPicker::closestPointInTriangle(dou
             y = 0.0;
         } else {
             x = 0.0;
-            y = clamp(dot(p-v3, v2-v3) / dot(v2-v3, v2-v3), 0.0, 1.0);
+            y = std::clamp(dot(p-v3, v2-v3) / dot(v2-v3, v2-v3), 0.0, 1.0);
         }
 
         z = 1.0 - x - y;
