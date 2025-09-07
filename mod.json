@@ -7,7 +7,7 @@
     },
 	"id": "anatom3000.bettercolorpicker",
 	"version": "v1.2.2",
-	"geode": "4.4.0",
+	"geode": "4.8.0",
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
