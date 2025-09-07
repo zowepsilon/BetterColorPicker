@@ -1,3 +1,6 @@
+# 1.2.2
+- Fix picker touch priority
+
 # 1.2.1
 - Port to MacOS (thanks hiimjasmine00!)
 - Remove antialiasing on Android as it crashed the game on startup

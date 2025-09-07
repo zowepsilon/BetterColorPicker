@@ -250,7 +250,7 @@ void BetterColorPicker::ccTouchEnded(CCTouch *touch, CCEvent *event) {
 }
 
 void BetterColorPicker::registerWithTouchDispatcher() {
-    cocos2d::CCTouchDispatcher::get()->addTargetedDelegate(this, -510, true);
+    cocos2d::CCTouchDispatcher::get()->addTargetedDelegate(this, -504, true);
 }
 
 // unused, left here to document what didn't work
