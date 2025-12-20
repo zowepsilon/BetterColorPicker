@@ -1,3 +1,6 @@
+# 1.2.4
+- Fix picker touch priority again
+
 # 1.2.3
 - Temporary undo picker touch priority fix
 

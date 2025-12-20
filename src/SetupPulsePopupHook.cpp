@@ -26,7 +26,7 @@ class $modify(MySetupPulsePopup, SetupPulsePopup) {
         m_fields->picker->setRgbValue(m_colorPicker->m_rgb, false);
         m_fields->picker->setScale(0.8f);
 
-        this->addChild(m_fields->picker);
+        this->m_buttonMenu->addChild(m_fields->picker);
         this->updatePickerPositions();
 
         m_fields->pickerToggle = CCMenuItemToggler::createWithStandardSprites(this, menu_selector(MySetupPulsePopup::onPickerToggle), .7);
@@ -89,7 +89,7 @@ class $modify(MySetupPulsePopup, SetupPulsePopup) {
         if (enable) {
             // i could not find a way to prevent the vanilla picker from picking up touch events
             m_colorPicker->setPosition(ccp(100000, 0));
-            m_fields->picker->setPosition(center + ccp(-8, 52));
+            m_fields->picker->setPosition(ccp(-9, 183));
         } else {
             m_fields->picker->setPosition(ccp(100000, 0));
             m_colorPicker->setPosition(center + ccp(-25, 35));

@@ -22,7 +22,7 @@ class $modify(MyColorSelectPopup, ColorSelectPopup) {
         });
         m_fields->picker->setRgbValue(m_colorPicker->m_rgb, false);
 
-        this->addChild(m_fields->picker);
+        this->m_buttonMenu->addChild(m_fields->picker);
         this->updatePickerPositions();
 
         m_fields->pickerToggle = CCMenuItemToggler::createWithStandardSprites(this, menu_selector(MyColorSelectPopup::onPickerToggle), .7);
@@ -87,7 +87,7 @@ class $modify(MyColorSelectPopup, ColorSelectPopup) {
         if (enable) {
             // i could not find a way to prevent the vanilla picker to pick up touch events
             m_colorPicker->setPosition(ccp(100000, 0));
-            m_fields->picker->setPosition(center + ccp(0, 36));
+            m_fields->picker->setPosition(ccp(0, 160));
         } else {
             m_fields->picker->setPosition(ccp(100000, 0));
             m_colorPicker->setPosition(center + ccp(0, 36));
