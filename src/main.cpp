@@ -26,7 +26,7 @@ BetterColorPicker* BetterColorPicker::create(ColorChangedCallback callback) {
 bool BetterColorPicker::init(ColorChangedCallback callback) {
     if (!CCControl::init()) return false;
     this->setTouchEnabled(true);
-    this->registerWithTouchDispatcher();
+    // this->registerWithTouchDispatcher();
 
     m_colorChangedCallback = callback;
 

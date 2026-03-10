@@ -1,3 +1,6 @@
+# 1.2.5
+- 2.2081 support
+
 # 1.2.4
 - Fix picker touch priority again
 
